@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MoedEx</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="logoSite">
+            <h1>Moed<span>Ex</span></h1>
+        </div>
+        <p class="subtituloSite">Cotações em tempo real</p>
+    </header>
+    
+    <main>
+        <div class="caixa">
+            <div class="cardConversor">
+                <div class="converterDe">
+                    <h1>Converter de</h1>
+                    <p>Escolha a moeda e digite o valor:</p>
+
+                    <label for="moeda">Moeda</label>
+                    <select id="moeda">
+                        <option value="BRL">🇧🇷 Real (BRL)</option>
+                        <option value="USD" selected>🇺🇸 Dólar (USD)</option>
+                        <option value="EUR">🇪🇺 Euro (EUR)</option>
+                        <option value="BTC">₿ Bitcoin (BTC)</option>
+                    </select>
+
+                    <label for="valor">Quantidade</label>
+                    <input placeholder="Ex: 100" type="number" id="valor" min="0">
+                </div>
+
+                <button class="seta" id="botaoInverter" title="Inverter moedas">⇅</button>
+
+                <div class="converterPara">
+                    <label for="moedaPara">Para</label>
+                    <select id="moedaPara">
+                        <option value="BRL" selected>🇧🇷 Real (BRL)</option>
+                        <option value="USD">🇺🇸 Dólar (USD)</option>
+                        <option value="EUR">🇪🇺 Euro (EUR)</option>
+                        <option value="BTC">₿ Bitcoin (BTC)</option>
+                    </select>
+                </div>
+
+                <button id="botaoConverter">Converter</button>
+
+                <div class="resultado" id="resultado">
+                    <p class="resultadoTitulo">Resultado</p>
+                    <h2 id="valorConvertido">R$ 0,00</h2>
+                    <p class="cotacaoAtual" id="cotacaoAtual">Escolha uma moeda e clique em converter</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
